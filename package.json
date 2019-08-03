@@ -2,9 +2,8 @@
   "name": "rebecca-and-danny",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/dqisme/rebecca-and-danny/issues"
   },
-  "homepage": "https://github.com/dqisme/rebecca-and-danny#readme"
+  "homepage": "https://github.com/dqisme/rebecca-and-danny#readme",
+  "devDependencies": {
+    "webpack": "4.39.1",
+    "webpack-cli": "3.3.6"
+  }
 }
