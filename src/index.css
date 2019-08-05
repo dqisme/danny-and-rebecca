@@ -1,3 +1,6 @@
 html {
-    background: black;
+    background: url('./images/background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
