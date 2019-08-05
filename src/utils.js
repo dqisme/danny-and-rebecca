@@ -10,3 +10,11 @@ export function createElement(htmlString, id) {
     element.setAttribute('id', id);
     return element;
 }
+
+export function toggleDisplay(element) {
+    if (element.style.display === 'none') {
+        element.style.display = null;
+    } else {
+        element.style.display = 'none';
+    }
+}
