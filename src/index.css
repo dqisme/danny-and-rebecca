@@ -1,15 +1,6 @@
 html {
-    background: url('./images/background.jpg') no-repeat center center;
+    background: url('./background.jpg') no-repeat center center;
     background-size: cover;
     height: 100%;
     overflow: hidden;
-}
-
-#container {
-    text-align: center;
-}
-
-#logo {
-    margin-top: 5%;
-    width: 70%;
 }
