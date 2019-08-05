@@ -21,6 +21,10 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         use: 'file-loader',
       },
+      {
+        test: /\.svg$/,
+        use: 'svg-inline-loader',
+      }
     ],
   },
   devServer: {

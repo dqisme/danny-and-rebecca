@@ -4,3 +4,12 @@ html {
     height: 100%;
     overflow: hidden;
 }
+
+#container {
+    text-align: center;
+}
+
+#logo {
+    margin-top: 5%;
+    width: 70%;
+}
