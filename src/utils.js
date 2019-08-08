@@ -7,7 +7,9 @@ export function createElement(htmlString, id) {
     } else {
         element = document.createElement(htmlString);
     }
-    element.setAttribute('id', id);
+    if (id) {
+        element.setAttribute('id', id);
+    }
     return element;
 }
 
