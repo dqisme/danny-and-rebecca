@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [new HtmlWebpackPlugin({
-    title: "Rebecca & Danny",
+    title: "Danny & Rebecca",
   })],
   module: {
     rules: [
