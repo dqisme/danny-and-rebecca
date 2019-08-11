@@ -18,7 +18,7 @@ Count.style.display = 'none';
 
 function getNumberHtml() {
   const Numbers = [OneHtml, TwoHtml, ThreeHtml, FourHtml, FiveHtml, SixHtml, SevenHtml, EightHtml, NineHtml];
-  const index = parseInt((new Date('2019-08-16T00:00:00-0400').getTime() - Date.now()) / 1000 / 3600 / 24) - 1;
+  const index = parseInt((new Date('2019-08-16T04:00:00').getTime() - Date.now()) / 1000 / 3600 / 24) - 1;
   if (index < 9) {
     return Numbers[index];
   }
