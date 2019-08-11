@@ -1,3 +1,23 @@
 #logo {
     width: 70%;
+    fill: white;
+    margin: 0 auto;
+}
+
+#logo svg {
+    width: 30%;
+    vertical-align: middle;
+}
+
+#logo #And {
+    width: 20%;
+    margin: 0 4%;
+}
+
+#logo #D {
+    transform-origin: bottom left;
+}
+
+#logo #R {
+    transform-origin: bottom left;
 }
