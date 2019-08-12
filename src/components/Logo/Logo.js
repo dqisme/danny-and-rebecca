@@ -29,7 +29,7 @@ Logo.addEventListener('mouseenter', () => {
     opacity: 0.7,
     scale: Math.random() + 1,
     easing: 'spring',
-    fill: '#E86C60',
+    fill: '#BF393F',
   });
   animationAndPath = anime({
     targets: '#AndPath',
