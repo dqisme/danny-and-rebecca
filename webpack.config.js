@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const outputPath = path.resolve(__dirname, 'docs');
 module.exports = {
   entry: './src/index.js',
+  mode: 'production',
   output: {
     path: outputPath,
     filename: 'bundle.js'
@@ -19,7 +20,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/,
-        use: 'file-loader',
+        use: 'url-loader',
       },
       {
         test: /\.svg$/,
