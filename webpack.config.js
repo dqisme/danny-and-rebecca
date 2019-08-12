@@ -1,7 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, 'docs');
 module.exports = {
@@ -11,13 +9,9 @@ module.exports = {
     path: outputPath,
     filename: 'bundle.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: "Danny & Rebecca",
-    }),
-    new ResourceHintWebpackPlugin(),
-    new CompressionPlugin(),
-  ],
+  plugins: [new HtmlWebpackPlugin({
+    title: "Danny & Rebecca",
+  })],
   module: {
     rules: [
       {
