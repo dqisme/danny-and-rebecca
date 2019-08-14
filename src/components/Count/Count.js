@@ -11,18 +11,16 @@ import OneHtml from './1.svg';
 import './Count.css';
 
 const Count = createElement('div', 'count');
-const NumberHtml = getNumberHtml();
-const NumberIcon = createElement(NumberHtml);
-Count.append(NumberIcon);
+const CountElement = createCountElement();
+Count.append(CountElement);
 Count.style.display = 'none';
 
-function getNumberHtml() {
+function createCountElement() {
   const Numbers = [OneHtml, TwoHtml, ThreeHtml, FourHtml, FiveHtml, SixHtml, SevenHtml, EightHtml, NineHtml];
   const index = getDaysLeft() - 1;
-  if (index < 9) {
-    return Numbers[index];
-  }
-  return 'div';
+  const NumberElement = Numbers[index];
+  return NumberElement ?
+    createElement(NumberElement) : createElement('div', 'final');
 }
 
 export default Count;
