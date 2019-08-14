@@ -1,4 +1,5 @@
 import { createElement, getDaysLeft } from "../../utils";
+import Hearts from '../Hearts/Hearts';
 import NineHtml from './9.svg';
 import EightHtml from './8.svg';
 import SevenHtml from './7.svg';
@@ -19,8 +20,14 @@ function createCountElement() {
   const Numbers = [OneHtml, TwoHtml, ThreeHtml, FourHtml, FiveHtml, SixHtml, SevenHtml, EightHtml, NineHtml];
   const index = getDaysLeft() - 1;
   const NumberElement = Numbers[index];
-  return NumberElement ?
-    createElement(NumberElement) : createElement('div', 'final');
+  if (NumberElement) {
+    return createElement(NumberElement);
+  }
+  const FinalElement = createElement('div', 'final');
+  FinalElement.append(Hearts);
+  Count.onDisplay(Hearts.start);
+  Count.onVanish(Hearts.stop);
+  return FinalElement;
 }
 
 export default Count;

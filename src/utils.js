@@ -10,14 +10,36 @@ export function createElement(htmlString, id) {
     if (id) {
         element.setAttribute('id', id);
     }
+    togglablize(element);
     return element;
+}
+
+function togglablize(element) {
+    element.onDisplay = (handler) => {
+        element._onDisplay = handler;
+    };
+    element.onVanish = (handler) => {
+        element._onVanish = handler;
+    };
+    element.display = () => {
+        element.style.display = null;
+        if (typeof element._onDisplay === 'function') {
+            element._onDisplay();
+        }
+    }
+    element.vanish = () => {
+        element.style.display = 'none';
+        if (typeof element._onVanish === 'function') {
+            element._onVanish();
+        }
+    }
 }
 
 export function toggleDisplay(element) {
     if (element.style.display === 'none') {
-        element.style.display = null;
+        element.display();
     } else {
-        element.style.display = 'none';
+        element.vanish();
     }
 }
 

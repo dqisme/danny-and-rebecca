@@ -1,0 +1,40 @@
+.heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: tomato;
+  animation: heart 5s ease-in;
+}
+.heart:after, .heart:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+.heart:before {
+  top: -50%;
+  left: 0;
+}
+.heart:after {
+  top: 0;
+  right: -50%;
+}
+
+@keyframes heart {
+  0% {
+    top: 110%;
+    -moz-transform: scale(1) rotate(-70deg);
+    -ms-transform: scale(1) rotate(-70deg);
+    -webkit-transform: scale(1) rotate(-70deg);
+    transform: scale(1) rotate(-70deg);
+  }
+  100% {
+    top: -200px;
+    -moz-transform: scale(4) rotate(-20deg);
+    -ms-transform: scale(4) rotate(-20deg);
+    -webkit-transform: scale(4) rotate(-20deg);
+    transform: scale(4) rotate(-20deg);
+  }
+}
