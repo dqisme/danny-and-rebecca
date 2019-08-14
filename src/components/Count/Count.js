@@ -1,4 +1,4 @@
-import { createElement } from "../../utils";
+import { createElement, getDaysLeft } from "../../utils";
 import NineHtml from './9.svg';
 import EightHtml from './8.svg';
 import SevenHtml from './7.svg';
@@ -18,7 +18,7 @@ Count.style.display = 'none';
 
 function getNumberHtml() {
   const Numbers = [OneHtml, TwoHtml, ThreeHtml, FourHtml, FiveHtml, SixHtml, SevenHtml, EightHtml, NineHtml];
-  const index = parseInt((new Date('2019-08-16T04:00:00').getTime() - Date.now()) / 1000 / 3600 / 24) - 1;
+  const index = getDaysLeft() - 1;
   if (index < 9) {
     return Numbers[index];
   }

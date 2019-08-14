@@ -20,3 +20,7 @@ export function toggleDisplay(element) {
         element.style.display = 'none';
     }
 }
+
+export function getDaysLeft() {
+  return parseInt((new Date('2019-08-16T04:00:00').getTime() - Date.now()) / 1000 / 3600 / 24);
+}
